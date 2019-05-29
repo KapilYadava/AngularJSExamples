@@ -1,0 +1,39 @@
+<div ng-controller= "addItemController">
+<p>Add Item</p>
+<p>
+<input type="text" ng-model="name" placeholder="Item name" required><br>
+<input type="text" ng-keypress="filterValue($event)" ng-model="quantity" placeholder="Quantity" required><br>
+<select ng-model="category" >
+<option value="">Select Category</option>
+<option ng-repeat="x in categories">{{x}}</option>
+</select><br>
+<input type="text" ng-model="price" placeholder="Price" min="0" max="99" number-mask="" ><br>
+<input type="text" ng-model="discount" placeholder="Discount" min="0" max="99" number-mask="" ><br>
+</p>
+<p>
+<button type="button" ng-click="addItem()">Add Item</button>
+</p>
+
+<p>Item List</p>
+
+{{list}}
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Discount</th>
+  </tr>
+  <tr ng-repeat="item in itemList">
+    <td>{{ item.name }}</td>
+    <td>{{ item.category}}</td>
+    <td>{{ item.quantity }}</td>
+    <td>{{ item.price }}</td>
+    <td>{{ item.discount }}</td>
+  </tr>
+</table>
+
+
+</div>

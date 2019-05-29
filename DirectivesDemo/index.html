@@ -1,0 +1,14 @@
+<!doctype html>
+<html ng-app>
+    <title> Directives</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <body>
+    <div>
+    <input type="checkbox" ng-model="enableDisableButton"> Disable Button
+    <button ng-disabled="enableDisableButton">Click Me!</button>
+    <button ng-show="enableDisableButton">Click Me!</button>
+    <p ng-init="clickCounter=0">Total Click: {{clickCounter}}</p>
+    <button ng-click="clickCounter= clickCounter+1">Click Me!</button>
+    </div>
+  </body>
+</html>

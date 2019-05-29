@@ -1,0 +1,32 @@
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  </head>
+  <body>
+    <div>
+      Name:
+      <input type="text" ng-model="student.fee" placeholder="Enter fee">
+      <h1>{{student.fee | currency: "&#8377;"}}</h1>
+    </div>
+
+    <div ng-init="subs=[{name: 'Math', marks: 89}, {name: 'English', marks: 57}, {name: 'History', marks: 60}]">
+      <input type="text" ng-model="subName" placeholder="Enter subject name">
+      <ul>
+        <li ng-repeat="sub in subs | filter: subName | orderBy:'marks'">
+          {{sub.name+" "+sub.marks}}
+        </li>
+      </ul>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Marks</th>
+      </tr>
+      <tr ng-repeat= "subject in subs">
+        <td>{{subject.name}}</td>
+        <td>{{subject.marks}}</td>
+      </tr>
+    </table>
+    </div>
+
+  </body>
+</html>

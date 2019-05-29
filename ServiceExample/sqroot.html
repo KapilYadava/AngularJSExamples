@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="myapp">
+    <title>Service Injection</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script>
+    var app= angular.module("myapp", []);
+    app.controller("ctr", function ($scope, root) {
+        $scope.result= root.result();
+    });
+    app.service("root", function (num) {
+      this.result= function () {
+        return num*num;
+      }
+    });
+
+    </script>
+  <body>
+    <div ng-controller="ctr">
+      <input type="text" ng-model="num" placeholder="Enter a Number"></input>
+      <input type="submit" value="x2">
+      <input type="submit" value="x3">
+      <br>
+      Result: {{result}}
+    </div>
+  </body>
+</html>

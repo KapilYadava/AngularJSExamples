@@ -1,0 +1,22 @@
+
+    <h3>e-Store</h3>
+    <form name="login" ng-controller="storeLoginController">
+      <p>
+      <input type="email" name="user" ng-model="username" placeholder="Username" required>
+      <span style="color:red" ng-show="login.user.$dirty && login.user.$invalid">
+      <span ng-show= "login.user.$error.required">Username is required</span>
+      </span>
+      </p>
+      <p>
+      <input name="password" type="password" ng-model="password" placeholder="Password" required>
+      <span style="color:red" ng-show="login.password.$dirty && login.password.$invalid">
+        <span ng-show="login.password.$error.required">Password is required.</span>
+      </span>
+      </p>
+      <button type="button" ng-disabled="login.password.$invalid || login.user.$invalid" ng-click="signIn()">Login</input>
+      <button type="button" ng-click="signUp()">Sign Up</button>
+      <button type="button" ng-click="addItems()">Add Item</button>
+
+      <p>{{errorMessage}}</p>
+      <p>{{user}}</p>
+    </form>

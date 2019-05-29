@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="myapp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+          var config = {
+          apiKey: "AIzaSyAm_--grn0fFc-OYLGrTVTdw8MZu8PIAYo",
+          authDomain: "myangular-7692a.firebaseapp.com",
+          databaseURL: "https://myangular-7692a.firebaseio.com",
+          projectId: "myangular-7692a",
+          storageBucket: "",
+          messagingSenderId: "44913970747"
+        };
+    firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+    <div ng-view></div>
+  </body>
+</html>

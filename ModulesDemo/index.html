@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="mainApp">
+    <title>Modules Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="mainApp.js"></script>
+  <body>
+    <div ng-controller="studentController">
+      {{student.firstName}} <br>
+      {{student.lastName}}<br>
+      {{student.fullName()}}<br>
+      {{student.subjects}}<br>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Marks</th>
+        </tr>
+        <tr ng-repeat= "sub in student.subjects">
+          <td>{{sub.name}}</td>
+          <td>{{sub.marks}}</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

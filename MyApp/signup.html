@@ -1,0 +1,20 @@
+<div ng-controller="findBankNameController">
+<p>Registration Page</p>
+<input type="text" ng-model="ifsc" placeholder="Enter IFSC code">
+<button type="button" ng-click="findBank()">Find</button><br>
+<p>
+  {{response}}<br><br>
+Bank Name: {{response.BANK}}<br>
+Branch Name: {{response.BRANCH}}<br>
+Bank City: {{response.CITY}}<br>
+Bank No: {{response.CONTACT}}<br>
+</p>
+
+<p>Registration Details</p>
+<input type="text" ng-model="name" placeholder="Enter your name" required><br>
+<input type="email" ng-model="email" placeholder="Enter your email" required><br>
+<input type="password" ng-model="password" placeholder="Enter your password" required><br>
+<button type="button" ng-click="insertData()">SignUp</button><br>
+<p>
+
+</div>
